@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,300;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/locomotive-scroll.css" />
+  </head>
+  <body class="purple">
+    <header style="z-index: 10">
+      <nav>
+        <div class="logo" style="z-index: 200">
+          <span class="cursorover"></span>
+        </div>
+        <ul class="cursorover">
+          <li id="marker"></li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Skills</li>
+          <li>Works</li>
+          <li>Contact</li>
+        </ul>
+        <div id="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="nav-menu">
+        <ul id="menu">
+          <li data-text="Home">Home</li>
+          <li data-text="About">About</li>
+          <li data-text="Works">Works</li>
+          <li data-text="Blog">Blog</li>
+          <li data-text="Contact">Contact</li>
+        </ul>
+      </div>
+      <div data-scroll-container>
+        <div id="cursor"></div>
+        <section
+          class="sect"
+          id="intro"
+          data-scroll-section
+          data-scroll-class="not-clickable"
+        >
+          <div
+            class="circle not-clickable"
+            data-scroll
+            data-scroll-speed="-2"
+          ></div>
+          <div
+            class="circle not-clickable"
+            data-scroll
+            data-scroll-speed="2"
+          ></div>
+          <h2
+            id="intro-backdrop"
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-direction="horizontal"
+            class="not-clickable"
+          >
+            developer
+          </h2>
+          <div id="intro-name" data-scroll>
+            <h2>Prince</h2>
+            <h2>Gbalam</h2>
+          </div>
+          <button class="cta-btn">Say Hi! <span>hi5</span></button>
+        </section>
+        <section id="about" class="sect" data-scroll-section>
+          <div class="sect-title" data-scroll>
+            <h2 data-scroll data-scroll-delay="0.09" data-scroll-speed="1">
+              A
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.11" data-scroll-speed="1">
+              b
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.13" data-scroll-speed="1">
+              o
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.07" data-scroll-speed="1">
+              u
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.05" data-scroll-speed="1">
+              t
+            </h2>
+          </div>
+
+          <div class="sect-body" data-scroll>
+            <div class="avatar" data-scroll data-scroll-speed="2">
+              <img
+                class="cursorover"
+                src="/img/main_avatar.jpg"
+                alt="Prince Gbalam"
+              />
+            </div>
+            <div class="perspective-text" data-scroll data-scroll-speed="1">
+              <p>
+                I'm a full stack web developer who loves to create enjoyable and
+                visually appealling websites. <br />
+                In other words, I can make what you want... <br />
+                I specialize in making animations and functional user
+                interfaces.
+                <br />In my spare time I write articles and teach programming on
+                various platforms, and make cool preloaders and 404 pages .
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="sect" id="skills" data-scroll-section>
+          <div class="sect-title" data-scroll>
+            <h2 data-scroll data-scroll-delay="0.05" data-scroll-speed="1">
+              S
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.07" data-scroll-speed="1">
+              k
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.09" data-scroll-speed="1">
+              i
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.11" data-scroll-speed="1">
+              l
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.13" data-scroll-speed="1">
+              l
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.15" data-scroll-speed="1">
+              s
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.13" data-scroll-speed="1">
+              /
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.11" data-scroll-speed="1">
+              T
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.09" data-scroll-speed="1">
+              o
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.07" data-scroll-speed="1">
+              o
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.06" data-scroll-speed="1">
+              l
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.05" data-scroll-speed="1">
+              s
+            </h2>
+          </div>
+          <div
+            class="grid"
+            data-scroll
+            data-scroll-speed="1"
+            data-scroll-id="grid"
+            data-scroll-speed="1"
+          ></div>
+        </section>
+        <!-- <section class="sect" data-scroll-section>
+        <h2>Works</h2>
+        <nav>All</nav>
+        <div></div>
+      </section> -->
+        <section class="sect" id="contact" data-scroll-section>
+          <div class="sect-title" data-scroll>
+            <h2 data-scroll data-scroll-delay="0.09" data-scroll-speed="1">
+              C
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.11" data-scroll-speed="1">
+              o
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.13" data-scroll-speed="1">
+              n
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.15" data-scroll-speed="1">
+              t
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.13" data-scroll-speed="1">
+              a
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.11" data-scroll-speed="1">
+              c
+            </h2>
+            <h2 data-scroll data-scroll-delay="0.09" data-scroll-speed="1">
+              t
+            </h2>
+          </div>
+          <form action="_" method="post">
+            <label
+              for="name"
+              data-scroll
+              data-scroll-speed="1"
+              data-scroll-delay="0.1"
+            >
+              <p>Name</p>
+              <input type="text" name="name" id="name" />
+            </label>
+            <label
+              for="email"
+              data-scroll
+              data-scroll-speed="1"
+              data-scroll-delay="0.2"
+            >
+              <p>Email</p>
+              <input type="email" name="email" id="email" />
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Drop a message"
+              data-scroll
+              data-scroll-speed="1"
+              data-scroll-delay="0.3"
+            ></textarea>
+            <button
+              class="cta-btn"
+              type="submit"
+              data-scroll
+              data-scroll-speed="1"
+              data-scroll-delay="0.4"
+            >
+              Send
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>Footer</footer>
+    <div id="loaer" class="none">
+      <div></div>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/locomotive-scroll.js"></script>
+    <script src="/js/scroll.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/nav.js"></script>
+  </body>
+</html>
