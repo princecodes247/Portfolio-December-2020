@@ -7,12 +7,12 @@
 }
 @font-face {
   font-family: Source Sans Pro;
-  src: url("./fonts/SourceSansPro-Regular.ttf");
+  src: url("../fonts/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
   font-family: Poppins;
-  src: url("./fonts/Poppins-Regular.ttf");
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 :root {
@@ -149,7 +149,7 @@ header nav .logo span {
   width: 80px;
   height: 80%;
 
-  background: url("./img/logo.svg");
+  background: url("../img/logo.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
