@@ -465,6 +465,7 @@ header nav #ham span {
     height: 100%;
   }
   header nav .logo {
+    padding: 0 5%;
   }
   header nav #ham {
     display: flex;
@@ -497,7 +498,8 @@ header nav #ham span {
     text-align: center;
     line-height: 4em;
     background-color: var(--s-color);
-    transition: 1s;
+    transition: height 1s;
+    
   }
   #nav-menu ul {
     list-style: none;
@@ -549,12 +551,12 @@ header nav #ham span {
     ); */
   }
   #nav-menu.open {
-    height: 92vh;
-    animation: menu-expand ease-out 2s forwards 1s;
+    height: 0vh;
+    animation: menu-expand ease-out 1.6s forwards;
   }
   #nav-menu.close {
     height: 92vh;
-    animation: menu-contract ease-out 2s forwards, menu-close 1s forwards 2s;
+    animation: menu-contract ease-out 1.4s forwards, menu-cose 1s both 2s;
   }
   @keyframes menu-close {
     to {
@@ -577,6 +579,7 @@ header nav #ham span {
       );
     }
     25% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -591,6 +594,7 @@ header nav #ham span {
       );
     }
     50% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -605,6 +609,7 @@ header nav #ham span {
       );
     }
     75% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -619,6 +624,7 @@ header nav #ham span {
       );
     }
     100% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -635,6 +641,7 @@ header nav #ham span {
   }
   @keyframes menu-contract {
     100% {
+      height: 0vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -649,6 +656,7 @@ header nav #ham span {
       );
     }
     75% {
+      
       clip-path: polygon(
         0 0,
         100% 0,
@@ -663,6 +671,7 @@ header nav #ham span {
       );
     }
     50% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
