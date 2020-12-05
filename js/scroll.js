@@ -1,4 +1,4 @@
-(function () {
+
   const scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     elMobile: document.querySelector("[data-scroll-container]"),
@@ -16,5 +16,5 @@
       header.classList.add('trans')
     }
   });
-})();
+
 
