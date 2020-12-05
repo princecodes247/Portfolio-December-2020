@@ -1,0 +1,45 @@
+#intro-arrow {
+  position: relative;
+  border-right: 2px solid var(--color);
+  border-bottom: 2px solid var(--color);
+  width: 25px;
+  height: 25px;
+  transform: rotate(45deg);
+  opacity: 0.5;
+}
+#intro-arrow::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  border-right: 2px solid var(--color);
+  border-bottom: 2px solid var(--color);
+  width: 25px;
+  height: 25px;
+  opacity: 0.4;
+  animation: blink 2s ease infinite 0.33s;
+}
+#intro-arrow::after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  border-right: 2px solid var(--color);
+  border-bottom: 2px solid var(--color);
+  width: 25px;
+  height: 25px;
+  opacity: 0.2;
+  animation: blink 2s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}

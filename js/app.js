@@ -21,18 +21,3 @@ function addStackToGrid(skill) {
 
 stackList.forEach(stack => addStackToGrid(stack))
 
-menuBtn.addEventListener('click', e => {
-    header.classList.toggle('nav-menu-is-open')
-    if (!menuIsOpen) {
-        navMenu.classList.add('open')
-        navMenu.classList.remove('close')
-        menuIsOpen = !menuIsOpen
-    } else {
-        navMenu.classList.add('close')
-        navMenu.classList.remove('open')
-        menuIsOpen = !menuIsOpen
-    }
-
-
-
-})

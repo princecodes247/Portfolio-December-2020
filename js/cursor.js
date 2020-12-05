@@ -6,6 +6,7 @@ body.addEventListener('mousemove', (e) => {
     cursor.style.top = e.clientY + "px"
     cursor.style.left = e.clientX + "px"
 
+
 })
 
 cursorovers.forEach(cursorover => {

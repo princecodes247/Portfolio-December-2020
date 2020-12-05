@@ -7,12 +7,12 @@
 }
 @font-face {
   font-family: Source Sans Pro;
-  src: url("./fonts/SourceSansPro-Regular.ttf");
+  src: url("../fonts/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
   font-family: Poppins;
-  src: url("./fonts/Poppins-Regular.ttf");
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 :root {
@@ -27,6 +27,7 @@
   --color: rgb(250, 250, 250);
   --p-color: #431143;
   --s-color: #5d175d;
+
   --alt-color: aliceblue;
   --btn-color: green;
 }
@@ -137,7 +138,7 @@ header nav {
   height: 7vh;
 }
 header nav .logo {
-  padding: 0 40px;
+  padding: 0;
   position: relative;
   flex: 6;
   display: flex;
@@ -149,7 +150,7 @@ header nav .logo span {
   width: 80px;
   height: 80%;
 
-  background: url("./img/logo.svg");
+  background: url("../img/logo.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -245,7 +246,7 @@ header nav #ham span {
   margin-bottom: 20px;
   pointer-events: none;
   transition: 1s;
-  overflow: hidden;
+
   cursor: pointer;
   transform-origin: top;
   font-family: var(--alt-font);
@@ -254,13 +255,51 @@ header nav #ham span {
 #intro #intro-backdrop {
   pointer-events: none;
   position: absolute;
-  top: calc(100vh-20vw);
-  left: 7%;
-  font-size: 20vw;
+
+  left: 1%;
+
   color: var(--alt-color);
-  opacity: 0.2;
+  /* opacity: 0.2; */
+  z-index: -1;
+}
+#intro-hand {
+  position: absolute;
+  left: 85vw;
+  top: 1vh;
+}
+#intro-hand .hand {
+  font-size: 6em;
+  transform: rotate(0deg);
+  transform-origin: 60% 70%;
+  border: 1px solid rebeccapurple;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro-hand .hand:hover {
+  transform: rotate(0deg);
+}
+
+#intro #intro-backdrop h2 {
+  writing-mode: horizontal-tb;
+  font-size: 20vw;
+  opacity: 0.08;
+}
+
+#intro .intro-backdrop-smaller {
+  pointer-events: none;
+  position: absolute;
+  left: 1%;
+  color: var(--alt-color);
+  opacity: 0.02;
   writing-mode: horizontal-tb;
   z-index: -1;
+  font-size: 8vw;
+  line-height: 0.8em;
+  top: -9vw;
 }
 
 #intro h2 {
@@ -274,11 +313,11 @@ header nav #ham span {
   transform: rotate(180deg);
 }
 
-#intro .cta-btn {
+#intro .cta-btns {
   position: relative;
   top: 4vh;
 }
-
+/* Everything about the intro arrow is in arrow.css */
 #skills {
   min-height: 35vh;
 }
@@ -405,6 +444,7 @@ header nav #ham span {
   border: none;
   border-radius: 2px;
   color: var(--color);
+  font-size: 16px;
 }
 
 #contact form textarea {
@@ -419,9 +459,10 @@ header nav #ham span {
 
 @media screen and (max-width: 1024px) {
   header nav {
-    width: 95%;
+    width: 80%;
   }
   header nav .logo {
+    padding: 0;
   }
 
   header nav ul li {
@@ -444,9 +485,9 @@ header nav #ham span {
   }
 
   #intro #intro-backdrop {
-    font-size: 20vw;
-    top: calc(100vh-20vw);
-    left: 10%;
+    font-size: 19vw;
+
+    left: 1%;
   }
 }
 
@@ -460,14 +501,15 @@ header nav #ham span {
     height: 8vh;
   }
   header nav {
-    width: 98%;
-
+    width: 90%;
     height: 100%;
   }
   header nav .logo {
+    padding: 0;
   }
   header nav #ham {
     display: flex;
+    margin: 0;
   }
   header nav ul {
     display: none;
@@ -497,7 +539,7 @@ header nav #ham span {
     text-align: center;
     line-height: 4em;
     background-color: var(--s-color);
-    transition: 1s;
+    transition: height 1s;
   }
   #nav-menu ul {
     list-style: none;
@@ -549,12 +591,12 @@ header nav #ham span {
     ); */
   }
   #nav-menu.open {
-    height: 92vh;
-    animation: menu-expand ease-out 2s forwards 1s;
+    height: 0vh;
+    animation: menu-expand ease-out 1.6s forwards;
   }
   #nav-menu.close {
     height: 92vh;
-    animation: menu-contract ease-out 2s forwards, menu-close 1s forwards 2s;
+    animation: menu-contract ease-out 1.4s forwards, menu-cose 1s both 2s;
   }
   @keyframes menu-close {
     to {
@@ -577,6 +619,7 @@ header nav #ham span {
       );
     }
     25% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -591,6 +634,7 @@ header nav #ham span {
       );
     }
     50% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -605,6 +649,7 @@ header nav #ham span {
       );
     }
     75% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -619,6 +664,7 @@ header nav #ham span {
       );
     }
     100% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -635,6 +681,7 @@ header nav #ham span {
   }
   @keyframes menu-contract {
     100% {
+      height: 0vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -663,6 +710,7 @@ header nav #ham span {
       );
     }
     50% {
+      height: 92vh;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -725,7 +773,7 @@ header nav #ham span {
   }
 
   #intro #intro-backdrop {
-    left: -5%;
+    left: -2%;
     font-size: 28vw;
   }
   #about .sect-body {
@@ -775,6 +823,7 @@ header nav #ham span {
     border: none;
     border-radius: 2px;
     color: var(--color);
+    font-size: 20px;
   }
 
   #contact form textarea {
@@ -785,9 +834,17 @@ header nav #ham span {
     border-radius: 2px;
     color: var(--color);
     resize: none;
+    font-size: 20px;
   }
 }
-
+@media screen and (max-width: 425px) {
+  #intro .intro-backdrop-smaller {
+    left: 2%;
+    font-size: 9vw;
+    line-height: 0.8em;
+    top: -12vw;
+  }
+}
 .not-clickable {
   pointer-events: none;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Prince Codes 247</title>
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,300;1,600;1,700&display=swap"
@@ -16,6 +16,7 @@
     /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/locomotive-scroll.css" />
+    <link rel="stylesheet" href="./css/arrow.css" />
   </head>
   <body class="purple">
     <header style="z-index: 10">
@@ -67,20 +68,38 @@
             data-scroll
             data-scroll-speed="2"
           ></div>
-          <h2
-            id="intro-backdrop"
-            data-scroll
-            data-scroll-speed="2"
-            data-scroll-direction="horizontal"
-            class="not-clickable"
-          >
-            developer
-          </h2>
+          <!-- Hand that follows the cursor, apparently, thats a lot of load -->
+          <!-- <div id="intro-hand">
+            <p class="hand">👈🏾</p>
+          </div> -->
+          <div id="intro-backdrop" data-scroll class="not-clickable">
+            <h4
+              data-scroll
+              data-scroll-speed="-1"
+              data-scroll-direction="horizontal"
+              class="not-clickable intro-backdrop-smaller"
+            >
+              I'm a <br />Full Stack
+            </h4>
+            <h2
+              data-scroll
+              data-scroll-speed="2"
+              data-scroll-direction="horizontal"
+            >
+              developer
+            </h2>
+          </div>
           <div id="intro-name" data-scroll>
             <h2>Prince</h2>
-            <h2>Gbalam</h2>
+            <h2 data-scroll data-scroll-speed="2">Gbalam</h2>
           </div>
-          <button class="cta-btn">Say Hi! <span>hi5</span></button>
+          <div data-scroll data-scroll-speed="1" class="cta-btns">
+            <div></div>
+            <div></div>
+            <div id="intro-arrow"></div>
+            <div></div>
+            <div></div>
+          </div>
         </section>
         <section id="about" class="sect" data-scroll-section>
           <div class="sect-title" data-scroll>
@@ -169,11 +188,15 @@
             data-scroll-speed="1"
           ></div>
         </section>
-        <!-- <section class="sect" data-scroll-section>
-        <h2>Works</h2>
-        <nav>All</nav>
-        <div></div>
-      </section> -->
+        <section class="sect" data-scroll-section>
+          <h2>Works</h2>
+          <nav>All</nav>
+
+          <div>Coming Soon...</div>
+        </section>
+        <section class="sect" data-scroll-section>
+          <h2>Services</h2>
+        </section>
         <section class="sect" id="contact" data-scroll-section>
           <div class="sect-title" data-scroll>
             <h2 data-scroll data-scroll-delay="0.09" data-scroll-speed="1">
@@ -244,11 +267,13 @@
     <div id="loaer" class="none">
       <div></div>
     </div>
+    <!-- <script src="./js/hand.js"></script> -->
     <script src="./js/app.js"></script>
     <script src="./js/locomotive-scroll.js"></script>
     <script src="./js/scroll.js"></script>
-    <script src="./js/theme.js"></script>
+    <!-- <script src="./js/theme.js"></script> -->
     <script src="./js/cursor.js"></script>
     <script src="./js/nav.js"></script>
+    <script src="./js/menu.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
