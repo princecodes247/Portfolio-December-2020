@@ -23,6 +23,10 @@ function addToGrid(item, target) {
     target.appendChild(container)
 }
 
+<<<<<<< HEAD
 skillsList.forEach(skill => addToGrid(skill, skillsGrid))
 worksList.forEach(work => addToGrid(work, worksGrid))
+=======
+stackList.forEach(stack => addStackToGrid(stack))
+>>>>>>> 3cbafc8bd15d222986432087dcad5d40e3ed47d9
 

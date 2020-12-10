@@ -541,7 +541,11 @@ header nav #ham span {
     height: 100%;
   }
   header nav .logo {
+<<<<<<< HEAD
     padding: 0;
+=======
+    padding: 0 5%;
+>>>>>>> 3cbafc8bd15d222986432087dcad5d40e3ed47d9
   }
   header nav #ham {
     display: flex;
@@ -577,6 +581,10 @@ header nav #ham span {
     line-height: 4em;
     background-color: var(--s-color);
     transition: height 1s;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 3cbafc8bd15d222986432087dcad5d40e3ed47d9
   }
   #nav-menu ul {
     list-style: none;
@@ -629,7 +637,11 @@ header nav #ham span {
   }
   #nav-menu.open {
     height: 0vh;
+<<<<<<< HEAD
     animation: menu-expand ease-out 1.6s forwards 0.3s;
+=======
+    animation: menu-expand ease-out 1.6s forwards;
+>>>>>>> 3cbafc8bd15d222986432087dcad5d40e3ed47d9
   }
   #nav-menu.close {
     height: 92vh;
@@ -733,6 +745,7 @@ header nav #ham span {
       );
     }
     75% {
+      
       clip-path: polygon(
         0 0,
         100% 0,
