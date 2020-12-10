@@ -323,7 +323,7 @@ header nav #ham span {
 }
 
 .sect {
-  min-height: 100vh;
+  min-height: 40vh;
   width: 100%;
   padding: 10px 10%;
 
@@ -389,8 +389,11 @@ header nav #ham span {
 
 .grid .grid-item {
   overflow: hidden;
-
+  transition: 0.3s;
   height: 40px;
+}
+.grid .grid-item:hover {
+  transform: scale(1.1);
 }
 .grid .grid-item span {
   background: var(--p-color);
@@ -402,9 +405,39 @@ header nav #ham span {
   align-items: center;
   padding-left: 10px;
   transition: 1s;
+  text-overflow: clip;
 }
 .grid .expand span {
   width: 100%;
+}
+#works .grid {
+  gap: 10px 10px;
+}
+
+#works .grid .grid-item {
+  overflow: hidden;
+  height: 200px;
+}
+#works .grid .grid-item:hover {
+  transform: scale(1.05);
+}
+#works .grid .grid-item:first-child {
+  position: relative;
+}
+
+#services .grid div {
+  background-color: var(--p-color);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#services .grid div img {
+  height: 100px;
+  width: 100px;
+  border: 1px solid red;
 }
 
 .cta-btn {
@@ -420,6 +453,9 @@ header nav #ham span {
 
 .none {
   display: none;
+}
+#contact {
+  min-height: 100vh;
 }
 
 #contact form {
@@ -519,6 +555,7 @@ header nav #ham span {
   }
   #nav-menu {
     position: relative;
+    top: -1px;
     height: 0vh;
     display: flex;
     clip-path: polygon(
@@ -592,7 +629,7 @@ header nav #ham span {
   }
   #nav-menu.open {
     height: 0vh;
-    animation: menu-expand ease-out 1.6s forwards;
+    animation: menu-expand ease-out 1.6s forwards 0.3s;
   }
   #nav-menu.close {
     height: 92vh;
@@ -760,8 +797,8 @@ header nav #ham span {
   #intro .circle:nth-child(1) {
     top: 10%;
     left: 0;
-    width: 40vw;
-    height: 40vw;
+    width: 30vw;
+    height: 30vw;
   }
 
   #intro .circle:nth-child(2) {
