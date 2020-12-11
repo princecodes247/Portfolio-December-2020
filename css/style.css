@@ -412,7 +412,6 @@ header nav #ham.open span:nth-child(3) {
   overflow: hidden;
   transition: 0.3s;
   height: 40px;
-  border: 1px solid red;
 }
 .grid .grid-item:hover {
   transform: scale(1.1);
