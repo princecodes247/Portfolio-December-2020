@@ -41,7 +41,7 @@
     </header>
 
     <main>
-      <div id="nav-menu">
+      <div id="nav-menu" data-scroll data-scroll-section>
         <ul id="menu">
           <li data-text="Home">Home</li>
           <li data-text="About">About</li>
@@ -260,7 +260,7 @@
             <span>F</span>
             <span>T</span>
           </div>
-          <form action="_" method="post">
+          <form id="contact-form" action="_" method="post">
             <label
               for="name"
               data-scroll
@@ -268,7 +268,7 @@
               data-scroll-delay="0.1"
             >
               <p>Name</p>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
             </label>
             <label
               for="email"
@@ -277,7 +277,7 @@
               data-scroll-delay="0.2"
             >
               <p>Email</p>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
             </label>
             <textarea
               name="message"
@@ -288,6 +288,7 @@
               data-scroll
               data-scroll-speed="1"
               data-scroll-delay="0.3"
+              required
             ></textarea>
             <button
               class="cta-btn"

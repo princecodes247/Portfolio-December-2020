@@ -466,6 +466,7 @@ header nav #ham span {
   justify-content: space-between;
   height: 60vh;
   margin: 40px auto;
+  position: relative;
 }
 
 #contact form label {
@@ -491,6 +492,29 @@ header nav #ham span {
   border-radius: 2px;
   color: var(--color);
   resize: none;
+}
+
+.error-bubble {
+  background-color: var(--s-color);
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 60px;
+  text-align: center;
+  animation: bubble-up 2s ease forwards;
+  color: white;
+  transition: 0s;
+}
+
+@keyframes bubble-up {
+  to {
+    transform: translate(-50%, -400%);
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 1024px) {
