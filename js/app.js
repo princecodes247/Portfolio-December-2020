@@ -23,10 +23,44 @@ function addToGrid(item, target) {
     container.appendChild(name)
     target.appendChild(container)
 }
-
+let panelLinks = [
+    {
+        name: 'GitHub',
+        link: '1'
+    },
+    {
+        name: 'Details',
+        link: '2'
+    },
+    {
+        name: 'View',
+        link: '3'
+    }
+]
+function addWorkToGrid(item, target) {
+    let container = document.createElement('span')
+    container.classList.add("grid-item")
+    container.setAttribute("data-scroll", '');
+    container.setAttribute("data-scroll-class", 'expand');
+    let name = document.createElement('span')
+    name.innerText = item
+    container.appendChild(name)
+    let panel = document.createElement('div')
+    panelLinks.forEach(panelLink => {
+        let linkBtn = document.createElement('button')
+        panel.appendChild(linkBtn)
+    })
+    container.appendChild(panel)
+    target.appendChild(container)
+}
+{/* <div>
+                <button>G</button>
+                <button>D</button>
+                <button>V</button>
+              </div> */}
 
 skillsList.forEach(skill => addToGrid(skill, skillsGrid))
-worksList.forEach(work => addToGrid(work, worksGrid))
+worksList.forEach(work => addWorkToGrid(work, worksGrid))
 
 // For the titles
 
