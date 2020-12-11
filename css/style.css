@@ -490,7 +490,8 @@ header nav #ham.open span:nth-child(3) {
 #services .grid div img {
   height: 100px;
   width: 100px;
-  border: 1px solid red;
+  background-color: var(--s-color);
+  border-radius: 10px;
 }
 
 .cta-btn {
