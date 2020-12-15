@@ -4,6 +4,15 @@ const skillsGrid = document.querySelector('#skills .grid')
 const worksGrid = document.querySelector('#works .grid')
 const header = document.querySelector('header')
 const menuBtn = document.querySelector("#ham")
+const works = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11"
+//const stack = "HTML, CSS, Sass, JS, BootStrap, Wordpress, React, PHP, Python, Node.JS, MongoDB, MySQL, Express, Java, C, Nginx, Linux, REST, Apache, Illustrator, Adobe XD, Photoshop, GitHub, Organization, Collaboration, Design, Google, StackOverflow"
+const navMenu = document.querySelector('#nav-menu')
+const contactForm = document.querySelector('#contact-form')
+const contactFormName = document.querySelector('#contact-form #name')
+
+let worksList = works.split(", ")
+let menuIsOpen = false
+
 
 const skillsList = [
     {
@@ -84,14 +93,7 @@ const skillsList = [
     },
 
 ]
-const works = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11"
-//const stack = "HTML, CSS, Sass, JS, BootStrap, Wordpress, React, PHP, Python, Node.JS, MongoDB, MySQL, Express, Java, C, Nginx, Linux, REST, Apache, Illustrator, Adobe XD, Photoshop, GitHub, Organization, Collaboration, Design, Google, StackOverflow"
-const navMenu = document.querySelector('#nav-menu')
-const contactForm = document.querySelector('#contact-form')
-const contactFormName = document.querySelector('#contact-form #name')
 
-let worksList = works.split(", ")
-let menuIsOpen = false
 function addToGrid(item, target) {
     let container = document.createElement('span')
     container.classList.add("grid-item")
