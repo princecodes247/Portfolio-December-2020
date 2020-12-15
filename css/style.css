@@ -716,6 +716,7 @@ header nav #ham.open span:nth-child(3) {
     line-height: 4em;
     background-color: var(--s-color);
     transition: height 1s;
+    z-index: 60;
   }
   #nav-menu ul {
     list-style: none;

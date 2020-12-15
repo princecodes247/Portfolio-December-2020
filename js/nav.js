@@ -1,7 +1,7 @@
 const marker = document.querySelector('#marker');
 const navItems = document.querySelectorAll('header nav ul li:not(#marker)')
 const nav = document.querySelector('header nav ul')
-const logo = document.querySelector('header nav .logo')
+const logo = document.querySelector('header nav .logo span')
 
 function markerPos(e) {
     marker.style.left = e.offsetLeft + "px";

@@ -32,7 +32,7 @@ menuOptions.forEach(menuOption => {
       if (e.target.innerText.toLowerCase() !== 'home') {
         scroll.scrollTo(`#${e.target.innerText.toLowerCase()}`)
       }
-    }, 1000)
+    }, 400)
   })
 
 })
