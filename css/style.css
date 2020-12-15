@@ -80,12 +80,12 @@ body {
   opacity: 0.2;
 }
 
-#intro .circle:nth-child(1) {
+#home .circle:nth-child(1) {
   top: 10%;
   left: 0;
 }
 
-#intro .circle:nth-child(2) {
+#home .circle:nth-child(2) {
   width: 10vw;
   height: 10vw;
   top: 45%;
@@ -247,7 +247,7 @@ header nav #ham.open span:nth-child(3) {
     transform: translate(-50%, -50%) rotate(405deg);
   }
 }
-#intro {
+#home {
   position: relative;
   min-height: 90vh;
   display: flex;
@@ -260,7 +260,7 @@ header nav #ham.open span:nth-child(3) {
   pointer-events: none;
 }
 
-#intro-name {
+#home-name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,7 +273,7 @@ header nav #ham.open span:nth-child(3) {
   font-family: var(--alt-font);
 }
 
-#intro #intro-backdrop {
+#home #home-backdrop {
   pointer-events: none;
   position: absolute;
 
@@ -283,12 +283,12 @@ header nav #ham.open span:nth-child(3) {
   /* opacity: 0.2; */
   z-index: -1;
 }
-#intro-hand {
+#home-hand {
   position: absolute;
   left: 85vw;
   top: 1vh;
 }
-#intro-hand .hand {
+#home-hand .hand {
   font-size: 6em;
   transform: rotate(0deg);
   transform-origin: 60% 70%;
@@ -300,17 +300,17 @@ header nav #ham.open span:nth-child(3) {
   justify-content: center;
   align-items: center;
 }
-#intro-hand .hand:hover {
+#home-hand .hand:hover {
   transform: rotate(0deg);
 }
 
-#intro #intro-backdrop h2 {
+#home #home-backdrop h2 {
   writing-mode: horizontal-tb;
   font-size: 20vw;
   opacity: 0.08;
 }
 
-#intro .intro-backdrop-smaller {
+#home .home-backdrop-smaller {
   pointer-events: none;
   position: absolute;
   left: 1%;
@@ -323,22 +323,22 @@ header nav #ham.open span:nth-child(3) {
   top: -9vw;
 }
 
-#intro h2 {
+#home h2 {
   writing-mode: vertical-lr;
   font-size: 15vh;
   line-height: 0.9;
   pointer-events: none;
   -webkit-user-select: none;
 }
-#intro h2:nth-child(1) {
+#home h2:nth-child(1) {
   transform: rotate(180deg);
 }
 
-#intro .cta-btns {
+#home .cta-btns {
   position: relative;
   top: 4vh;
 }
-/* Everything about the intro arrow is in arrow.css */
+/* Everything about the home arrow is in arrow.css */
 #skills {
   min-height: 35vh;
 }
@@ -640,14 +640,14 @@ header nav #ham.open span:nth-child(3) {
     padding: 0 10px;
   }
 
-  #intro .circle:nth-child(1) {
+  #home .circle:nth-child(1) {
     top: 10%;
     left: 0;
     width: 30vw;
     height: 30vw;
   }
 
-  #intro .circle:nth-child(2) {
+  #home .circle:nth-child(2) {
     width: 20vw;
     height: 20vw;
     top: 45%;
@@ -655,7 +655,7 @@ header nav #ham.open span:nth-child(3) {
     /* background-color: #922492; */
   }
 
-  #intro #intro-backdrop {
+  #home #home-backdrop {
     font-size: 19vw;
 
     left: 1%;
@@ -932,14 +932,14 @@ header nav #ham.open span:nth-child(3) {
   .sect {
     padding: 10px 5%;
   }
-  #intro .circle:nth-child(1) {
+  #home .circle:nth-child(1) {
     top: 10%;
     left: 0;
     width: 30vw;
     height: 30vw;
   }
 
-  #intro .circle:nth-child(2) {
+  #home .circle:nth-child(2) {
     width: 20vw;
     height: 20vw;
     top: 45%;
@@ -947,7 +947,7 @@ header nav #ham.open span:nth-child(3) {
     /* background-color: #922492; */
   }
 
-  #intro #intro-backdrop {
+  #home #home-backdrop {
     left: -2%;
     font-size: 28vw;
   }
@@ -1032,7 +1032,7 @@ header nav #ham.open span:nth-child(3) {
   }
 }
 @media screen and (max-width: 425px) {
-  #intro .intro-backdrop-smaller {
+  #home .home-backdrop-smaller {
     left: 2%;
     font-size: 9vw;
     line-height: 0.8em;

@@ -1,4 +1,4 @@
-#intro-arrow {
+#home-arrow {
   position: relative;
   border-right: 2px solid var(--color);
   border-bottom: 2px solid var(--color);
@@ -7,7 +7,7 @@
   transform: rotate(45deg);
   opacity: 0.5;
 }
-#intro-arrow::before {
+#home-arrow::before {
   content: "";
   position: absolute;
   top: -8px;
@@ -19,7 +19,7 @@
   opacity: 0.4;
   animation: blink 2s ease infinite 0.33s;
 }
-#intro-arrow::after {
+#home-arrow::after {
   content: "";
   position: absolute;
   top: -16px;

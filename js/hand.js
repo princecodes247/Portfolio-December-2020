@@ -1,25 +1,25 @@
-const introHand = document.querySelector('#intro-hand .hand')
+const homeHand = document.querySelector('#home-hand .hand')
 var isCursorOverHand = false
 const handTurn = () => {
-    let x = (introHand.getBoundingClientRect().left) + (introHand.clientWidth / 2)
-    let y = (introHand.getBoundingClientRect().top) + (introHand.clientHeight / 2)
+    let x = (homeHand.getBoundingClientRect().left) + (homeHand.clientWidth / 2)
+    let y = (homeHand.getBoundingClientRect().top) + (homeHand.clientHeight / 2)
     let radian = Math.atan2(event.pageX - x, event.pageY - y)
     let rotation = (radian * (180 / Math.PI) * -1) + 270
-    introHand.style.transform = `rotate(${rotation}deg)`
+    homeHand.style.transform = `rotate(${rotation}deg)`
 }
 
-introHand.addEventListener('mouseover', () => {
-    introHand.innerText = '✋🏾'
-    console.log(introHand.style.transform);
+homeHand.addEventListener('mouseover', () => {
+    homeHand.innerText = '✋🏾'
+    console.log(homeHand.style.transform);
     isCursorOverHand = !isCursorOverHand
 })
-introHand.addEventListener('mouseleave', () => {
-    introHand.innerText = '👈🏾'
+homeHand.addEventListener('mouseleave', () => {
+    homeHand.innerText = '👈🏾'
     isCursorOverHand = !isCursorOverHand
 })
-introHand.addEventListener('mousedown', () => {
-    introHand.innerText = '🖐🏾'
+homeHand.addEventListener('mousedown', () => {
+    homeHand.innerText = '🖐🏾'
 })
-introHand.addEventListener('mouseup', () => {
-    introHand.innerText = '✋🏾'
+homeHand.addEventListener('mouseup', () => {
+    homeHand.innerText = '✋🏾'
 })
