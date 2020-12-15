@@ -20,3 +20,9 @@ nav.addEventListener('mouseleave', (e) => {
     marker.style.width = "68px";
 })
 
+
+
+nav.addEventListener('click', (e) => {
+    scroll.scrollTo(`#${e.target.innerText.toLowerCase()}`);
+    //console.log(console)
+})
