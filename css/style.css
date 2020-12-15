@@ -577,7 +577,7 @@ header nav #ham.open span:nth-child(3) {
 }
 
 #contact .social-links {
-  margin-top: 80px;
+  margin: 70px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -595,6 +595,14 @@ header nav #ham.open span:nth-child(3) {
 
 #contact .social-links span p {
   padding-left: 5px;
+  width: 0%;
+  transform-origin: left;
+  transition: 0.9s;
+  overflow: hidden;
+}
+
+#contact .social-links span:hover p {
+  width: 100%;
 }
 
 .error-bubble {
@@ -1016,11 +1024,11 @@ header nav #ham.open span:nth-child(3) {
   #contact .social-links span p {
     transform-origin: left;
     overflow: hidden;
-    width: 0px;
+    width: 0%;
     transition: 0.8s;
   }
   #contact .social-links span:hover p {
-    width: 100%;
+    width: 0%;
   }
 }
 @media screen and (max-width: 425px) {
