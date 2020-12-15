@@ -5,7 +5,7 @@ My first portfolio website.
 It's been lots of fun making this,
 
 I hope I finish before my birthday (December 12) as promised 
-
+(I couldn't finish it before the deadline 😅🤧)
 ## Tools
 - HTML 
 - CSS
