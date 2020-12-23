@@ -428,7 +428,7 @@ header nav #ham.open span:nth-child(3) {
   overflow: hidden;
   display: block;
   height: 100%;
-  width: 0%;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -668,6 +668,9 @@ header nav #ham.open span:nth-child(3) {
 }
 
 @media screen and (max-width: 850px) {
+  #cursor {
+    display: none;
+  }
   .nav-menu-is-open {
     --bg: var(--s-color);
     transition: 0.1s;
@@ -845,7 +848,7 @@ header nav #ham.open span:nth-child(3) {
       );
     }
     100% {
-      height: 92vh;
+      height: 93vh;
       clip-path: polygon(
         0 0,
         100% 0,
