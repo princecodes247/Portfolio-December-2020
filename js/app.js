@@ -98,7 +98,7 @@ function addToGrid(item, target) {
     let container = document.createElement('span')
     container.classList.add("grid-item")
     container.setAttribute("data-scroll", '');
-    container.setAttribute("data-scroll-class", 'expand');
+   // container.setAttribute("data-scroll-class", 'expand');
     let name = document.createElement('span')
     name.classList.add('grid-details')
     name.innerText = item.name

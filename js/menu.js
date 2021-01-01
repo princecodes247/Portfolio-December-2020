@@ -1,7 +1,7 @@
 menuBtn.addEventListener('click', e => {
   header.classList.toggle('nav-menu-is-open')
   if (!menuIsOpen) {
-    scroll.scrollTo('top')
+    //scroll.scrollTo('top')
     scroll.stop()
     menuBtn.classList.add('open')
     menuBtn.classList.remove('close')
