@@ -517,18 +517,22 @@ header nav #ham.open span:nth-child(3) {
 }
 #services .grid div {
   background-color: var(--p-color);
+  padding: 20px;
   height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
 #services .grid div svg {
-  border-radius: 10px;
   font-size: 60px;
+  color: white;
+  fill: white;
 }
-
+#services .grid div h3 {
+  margin-top: 10px;
+}
 .cta-btn {
   background-color: var(--btn-color);
   padding: 8px 10px;
