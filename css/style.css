@@ -503,14 +503,18 @@ header nav #ham.open span:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px;
+  padding: 6px;
   text-align: center;
 }
 
-/* #works .grid .grid-item.expand .panel button svg {
+#works .grid .grid-item.expand .panel button svg {
   display: flex;
   align-items: center;
-} */
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 #services .grid div {
   background-color: var(--p-color);
   height: 200px;
@@ -520,11 +524,9 @@ header nav #ham.open span:nth-child(3) {
   align-items: center;
   text-align: center;
 }
-#services .grid div img {
-  height: 100px;
-  width: 100px;
-  background-color: var(--s-color);
+#services .grid div svg {
   border-radius: 10px;
+  font-size: 60px;
 }
 
 .cta-btn {
