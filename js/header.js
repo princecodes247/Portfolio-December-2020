@@ -9,7 +9,7 @@ headers.forEach(header => {
 
 })
 
-function waver(item, target, max, interval, speed, mode = 3) {
+function waver(item, target, max, interval, speed, mode = 1) {
     switch (mode) {
         case 1:
             let textCenter = Math.floor(item.length / 2)
