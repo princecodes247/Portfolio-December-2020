@@ -10,7 +10,162 @@ const navMenu = document.querySelector('#nav-menu')
 const contactForm = document.querySelector('#contact-form')
 const contactFormName = document.querySelector('#contact-form #name')
 
-let worksList = works.split(", ")
+let workTags = ["feat", "full", "front", "api", "lib", "console", "basic", "ui", ""]
+
+let worksList = [
+{
+    name:"Veldora",
+    link: "https://veldora.herokuapp.com/",
+    dateCreated: "",
+    img: "img--veldora.png",
+    tags: ["full", "featured"], desc: "Veldora (formerly known as Mailion) is a form handling PAAS that makes form handling and data gathering simpler and easy", 
+    source: "https://github.com/princecodes247/veldora"
+},
+{
+    name:"Portfolio (Star Wars Version)",
+    link: "https://princecodes.vercel.app/",
+    dateCreated: "",
+    img: "img--portfoliostarwars.png",
+    tags: ["front", "featured"], desc: "A simple version of my portfolio with its theme based around the popular show, Star Wars", 
+    source: "https://github.com/princecodes247/Portfolio-April-2021"
+},
+{
+    name:"FirstTime2020",
+    link: "https://firsttime2020.herokuapp.com",
+    dateCreated: "",
+    img: "img--firsttime.png",
+    tags: ["full", "featured"], desc: "",
+    source: "https://github.com/princecodes247/FirstTime"
+},
+{
+    name:"InstaNovella",
+    link: "https://instanovella2.herokuapp.com/",
+    dateCreated: "",
+    img: "img--instanovella.png",
+    tags: ["full", "featured"], desc: "",
+    source: "https://github.com/princecodes247/Instanovella-full"
+},
+{
+    name:"Glassmorphism Generator",
+    link: "https://glassmorphism-generator-princecodes247.vercel.app/",
+    dateCreated: "",
+    img: "img--glassmorphismgen.png",
+    tags: ["front", "featured"], desc: "",
+    source: "https://github.com/princecodes247/Glassmorphism"
+},
+{
+     name:"UTrade Template",
+    link: "https://princecodes247.github.io/uemma_trade",
+    dateCreated: "",
+    img: "img--utrade.png",
+    tags: ["front", "featured"], desc: "", 
+    source: "https://github.com/princecodes247/uemma_trade"
+},
+{
+     name:"Mailion",
+    link: "https://mailion.herokuapp.com/",
+    dateCreated: "",
+    img: "img--mailion.png",
+    tags: ["full", "featured"], desc: "", 
+    source: "https://github.com/princecodes247/mailion-server"
+    
+},
+{
+     name:"Facebook Comment Loading",
+    link: "https://princecodes247.github.io/Facebook-comment-loading-animation-/",
+    dateCreated: "",
+    img: "img--facebookloading.png",
+    tags: ["front"], desc: "", 
+    source: ""
+    
+},
+{
+     name:"Windows Button Grid Effect",
+    link: "https://princecodes247.github.io/Facebook-comment-loading-animation-/",
+    dateCreated: "",
+    img: "img--windowseffect.png",
+    tags: ["front"], desc: "", 
+    source: ""
+    
+},
+{
+     name:"Hex Grid",
+    link: "https://princecodes247.github.io/Facebook-comment-loading-animation-/",
+    dateCreated: "",
+    img: "img--hexgrid.png",
+    tags: ["front"], desc: "", 
+    source: ""
+    
+},
+{
+     name:"pyCommit",
+    link: "",
+    dateCreated: "",
+    img: "img--pycommit.png",
+    tags: ["console"], desc: "", source: ""
+    
+},
+{
+     name:"David Eye",
+    link: "https://princecodes247.github.io/David-Eye/",
+    dateCreated: "",
+    img: "img--davideye.png",
+    tags: ["front"], desc: "", 
+    source: "https://github.com/princecodes247/David-Eye"
+    
+},
+{
+     name:"CipherType",
+    link: "https://github.com/princecodes247/pyCommit",
+    dateCreated: "",
+    img: "img--ciphertype.png",
+    tags: ["lib", "featured"], desc: "", 
+    source: "https://github.com/princecodes247/CipherType"
+    
+},
+{
+     name:"Kotes",
+    link: "",
+    dateCreated: "",
+    img: "img--kotes.png",
+    tags: [], desc: "", source: ""
+    
+},
+{
+     name: "Contest App",
+    link: "",
+    dateCreated: "",
+    img: "img--contestapp.png",
+    tags: ["full", "featured"], desc: "", 
+    source: "https://github.com/princecodes247/Contest-App"
+    
+},
+{
+     name: "ISabi",
+    link: "https://princecodes247.github.io/isabi/",
+    dateCreated: "",
+    img: "img--isabi.png",
+    tags: ["front"], desc: "", 
+    source: "https://github.com/princecodes247/isabi"
+    
+},
+{
+     name: "CryptoVest",
+    link: "https://princecodes247.github.io/CryptoVest--Client/home.html",
+    dateCreated: "",
+    img: "img--cryptovest.png",
+    tags: ["front"], desc: "", 
+    source: "https://github.com/princecodes247/CryptoVest--Client"
+    
+},
+]
+let worksTags = worksList.map(worksList => worksList.tags)
+worksTags = worksTags.reduce((previousItem, item) => {
+    let tags = [...previousItem, ...item]
+    return tags
+})
+worksTags = new Set(worksTags)
+console.log(worksTags)
 let menuIsOpen = false
 
 
@@ -128,27 +283,65 @@ function addWorkToGrid(item, target) {
     container.classList.add("grid-item")
     container.setAttribute("data-scroll", '');
     container.setAttribute("data-scroll-class", 'expand');
-    let name = document.createElement('span')
-    name.classList.add('grid-details')
-    name.innerText = item
-    container.appendChild(name)
+
+
+    let tags = document.createElement('span')
+    tags.classList.add('tags')
+    console.log(item.tags)
+    item.tags.reduce((prevTag, tag) => {
+
+        if (tag !== "featured") {
+        tags.innerHTML = prevTag + ", "+ tag
+        }
+        else {
+            tag = tag == "front" || tag == "back" ? tag + "-end" :  tag
+            prevTag = prevTag == "front" || prevTag == "back" ? prevTag + "-end" :  prevTag
+           
+            tags.innerHTML = prevTag 
+        }
+    })
+    container.appendChild(tags)
+    let gridItemBody = document.createElement('span')
+    let gridItemImg = document.createElement('span')
+    if (Object.keys(item).includes("img")) {
+            gridItemImg.style.background = `url('./img/${item.img}')`
+    gridItemImg.style.backgroundRepeat = "no-repeat"
+    gridItemImg.style.backgroundSize = "101%"
+    }
+    // gridItemImg.alt = "../img/main_avatar.jpg"
+    let gridItemName = document.createElement('p')
+      gridItemName.classList.add('grid_item__name')
+      gridItemImg.classList.add('grid_item__img')
+    gridItemBody.classList.add('grid-details')
+    gridItemName.innerText = item.name
+    gridItemBody.appendChild(gridItemImg)
+    gridItemBody.appendChild(gridItemName)
+    container.appendChild(gridItemBody)
     let panel = document.createElement('div')
     panel.classList.add('panel')
     panelLinks.forEach(panelLink => {
-        let linkBtn = document.createElement('button')
+        let linkBtn = document.createElement('a')
+
+            
         if (panelLink.name === 'Github') {
+            linkBtn.style.display = item.source.trim() !== "" ? "block" : "none"
+            linkBtn.href = item.source;
             linkBtn.innerHTML = `
             <svg fill="currentColor" width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" preserveAspectRatio="xMaxYMax meet" >
             <title xmlns="http://www.w3.org/2000/svg">GitHub icon</title><path xmlns="http://www.w3.org/2000/svg" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
             </svg>`
         }
         if (panelLink.name === 'Details') {
+            linkBtn.href = item.desc;
+            linkBtn.style.display = item.desc.trim() !== "" ? "block" : "none"
             linkBtn.innerHTML = `
             <svg fill="currentColor" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet" x="130">
             <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path>
             </svg>`
         }
         if (panelLink.name === 'View') {
+            linkBtn.style.display = item.link.trim() !== "" ? "block" : "none"
+            linkBtn.href = item.link;
             linkBtn.innerHTML = `
             <svg width="15" height="15" stroke="currentColor" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio"><path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             `
@@ -158,14 +351,15 @@ function addWorkToGrid(item, target) {
     container.appendChild(panel)
     target.appendChild(container)
 }
-{/* <div>
-                <button>G</button>
-                <button>D</button>
-                <button>V</button>
-              </div> */}
 
-skillsList.forEach(skill => addToGrid(skill, skillsGrid))
-worksList.forEach(work => addWorkToGrid(work, worksGrid))
+ worksList.forEach(work => {
+// ADD CONDITION
+if (true){
+
+
+    addWorkToGrid(work, worksGrid)
+}
+})
 
 // For the titles
 
