@@ -18,7 +18,8 @@ let worksList = [
     link: "https://veldora.herokuapp.com/",
     dateCreated: "",
     img: "img--veldora.png",
-    tags: ["full", "featured"], desc: "Veldora (formerly known as Mailion) is a form handling PAAS that makes form handling and data gathering simpler and easy", 
+    tags: ["full", "featured"],
+    desc: "Veldora (formerly known as Mailion) is a form handling PAAS that makes form handling and data gathering simpler and easy", 
     source: "https://github.com/princecodes247/veldora"
 },
 {
@@ -26,7 +27,8 @@ let worksList = [
     link: "https://princecodes.vercel.app/",
     dateCreated: "",
     img: "img--portfoliostarwars.png",
-    tags: ["front", "featured"], desc: "A simple version of my portfolio with its theme based around the popular show, Star Wars", 
+    tags: ["front", "featured"], 
+    desc: "A simple version of my portfolio with its theme based around the popular show, Star Wars", 
     source: "https://github.com/princecodes247/Portfolio-April-2021"
 },
 {
@@ -34,7 +36,8 @@ let worksList = [
     link: "https://firsttime2020.herokuapp.com",
     dateCreated: "",
     img: "img--firsttime.png",
-    tags: ["full", "featured"], desc: "",
+    tags: ["full", "featured"], 
+    desc: "/work.html",
     source: "https://github.com/princecodes247/FirstTime"
 },
 {
@@ -288,25 +291,21 @@ function addWorkToGrid(item, target) {
     let tags = document.createElement('span')
     tags.classList.add('tags')
     console.log(item.tags)
-    item.tags.reduce((prevTag, tag) => {
+
+     item.tags.forEach((tag) => {
 
         if (tag !== "featured") {
-        tags.innerHTML = prevTag + ", "+ tag
+        if(tag == "front" || tag == "back"){
+         tag = tag + "-end"
         }
-        else {
-            tag = tag == "front" || tag == "back" ? tag + "-end" :  tag
-            prevTag = prevTag == "front" || prevTag == "back" ? prevTag + "-end" :  prevTag
-           
-            tags.innerHTML = prevTag 
-        }
+        tags.innerHTML = tag + ", "
+    }
     })
     container.appendChild(tags)
     let gridItemBody = document.createElement('span')
     let gridItemImg = document.createElement('span')
     if (Object.keys(item).includes("img")) {
-            gridItemImg.style.background = `url('./img/${item.img}')`
-    gridItemImg.style.backgroundRepeat = "no-repeat"
-    gridItemImg.style.backgroundSize = "101%"
+            gridItemImg.style.setProperty('--work-image-link', `url(../img/${item.img})`)
     }
     // gridItemImg.alt = "../img/main_avatar.jpg"
     let gridItemName = document.createElement('p')

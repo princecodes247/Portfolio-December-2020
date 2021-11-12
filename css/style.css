@@ -221,6 +221,17 @@ header nav #ham.open span:nth-child(3) {
 #nav-menu {
   display: none;
 }
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+
 #cursor {
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-top: 2px solid transparent;
@@ -438,9 +449,14 @@ header nav #ham.open span:nth-child(3) {
 }
 
 .grid-details .grid_item__img {
+  --work-image-link: url("../img/img--firsttime.png");
+  --work-image: rgba(0, 0, 0, 0) var(--work-image-link) 0% 0% / 101%;
+  background: var(--work-image);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 
+  transition: 0.7s;
   position: absolute;
-  /*border: none;*/
   top: 0;
   bottom: 0;
   left: 0;
@@ -453,7 +469,10 @@ header nav #ham.open span:nth-child(3) {
   outline:  none;
   box-shadow: inset 0 0 0 #0000;
 }
-
+#works .grid .grid-item.expand:hover .grid_item__img {
+  background-position-y: -20px; 
+  transform: scale(1.4);
+}
 .grid_item__name {
   width: 100%;
   height: 100%;
@@ -530,12 +549,13 @@ header nav #ham.open span:nth-child(3) {
   padding: 10%;
   z-index: 3;
   padding-bottom: 10%;
-  background: linear-gradient(to bottom, #00000066, #000000d6);
+  background: linear-gradient(to bottom, rgba(40, 10, 40, 0.5), rgba(40, 10, 40, 1));
   transition: 0.5s;
 }
 #works .grid .grid-item.expand:hover div {
   opacity: 1;
 }
+
 #works .grid .grid-item.expand .panel a {
   background: none;
   outline: none;
