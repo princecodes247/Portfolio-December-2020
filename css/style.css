@@ -410,7 +410,7 @@ html.is-animating .transition-fade {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-#about .sect-body .avatar.small {
+/*#about .sect-body .avatar.small {
   flex: 2;
   display: flex;
   justify-content: center;
@@ -419,7 +419,7 @@ html.is-animating .transition-fade {
 #about .sect-body .avatar.small img {
   width: 70%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-}
+}*/
 
 
 .perspective-text {
@@ -1067,7 +1067,14 @@ html.is-animating .transition-fade {
     justify-self: start;
   }
   #about .sect-body .avatar {
+      flex: 2;
+  display: flex;
+  justify-content: center;
   }
+
+  #about .sect-body .avatar.small img {
+  width: 70%;
+}
   .perspective-text {
     color: var(--color);
     font-family: Arial;

@@ -5,7 +5,7 @@
     smooth: true,
     lerp: 0.03,
     smoothMobile: true,
-    touchMultiplier: 3,
+    touchMultiplier: 5,
     multiplier: 0.8,
     firefoxMultiplier: 0.8,
     repeat: false,

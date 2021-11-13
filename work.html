@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="is-animating" lang="en">
- <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prince Codes 247</title>
@@ -19,13 +19,42 @@
     <link rel="stylesheet" href="./css/arrow.css" />
   </head>
   <body class="purple">
-  
+    <header style="z-index: 10">
+      <nav>
+        <div class="logo" style="z-index: 200">
+          <span class="cursorover"></span>
+        </div>
+        <ul class="cursorover">
+          <li id="marker"></li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Works</li>
+          <li>Skills</li>
+          <li>Contact</li>
+          <li><a href="/about.html">AAA</a></li>
+        </ul>
+        <div id="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
 
     <main class="container">
-      
-      <div data-scroll-container class="wrapper transition-fade" id="swup">
-       
-       <section id="about" class="sect" data-scroll-section>
+      <div id="nav-menu" data-scroll data-scroll-section>
+        <ul id="menu">
+          <li data-text="Home">Home</li>
+          <li data-text="About">About</li>
+          <li data-text="Works">Works</li>
+          <li data-text="Blog">Blog</li>
+          <li data-text="Contact">Contact</li>
+        </ul>
+      </div>
+      <div class="wrapper transition-fade" id="swup" data-scroll-container>
+        <div id="cursor"></div>
+        
+        <section id="about" class="sect" data-scroll-section>
           <div class="sect-title wave" data-wave-interval="0.03" data-scroll>
             About
           </div>
@@ -34,7 +63,7 @@
             <div class="avatar small" data-scroll data-scroll-speed="2">
               <img
                 class="cursorover"
-                src="./img/img--firsttime.png"
+                src="./img/main_avatar.jpg"
                 alt="Prince Gbalam"
               />
             </div>
@@ -46,17 +75,25 @@
             </p>
           </div>
         </section>
-      <section class="sect"></section>
+       
+
+        <!-- <section class="sect" data-scroll-section>
+          <h2>Testimonials</h2>
+        </section> -->
+       
+      <section class="sect small--sect"></section>
       </div>
-    </main>
     <footer>Footer</footer>
+    </main>
     <div id="loaer" class="none">
       <div></div>
     </div>
-     <!-- <script src="./js/header.js"></script> -->
+    <!-- <script src="./js/hand.js"></script> -->
+    <!-- <script src="./js/theme.js"></script> -->
+    <script src="./js/header.js"></script>
     <script src="./js/locomotive-scroll.js"></script>
     <script src="./js/scroll.js"></script>
-    <!-- <script src="./js/app.js"></script> -->
+    <script src="./js/app.js"></script>
     <script src="./js/cursor.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/menu.js" type="text/javascript" charset="utf-8"></script>

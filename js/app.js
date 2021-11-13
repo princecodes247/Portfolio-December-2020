@@ -12,7 +12,8 @@ const contactFormName = document.querySelector('#contact-form #name')
 
 let workTags = ["feat", "full", "front", "api", "lib", "console", "basic", "ui", ""]
 
-let worksList = [
+let worksList = 
+[
 {
     name:"Veldora",
     link: "https://veldora.herokuapp.com/",
@@ -160,7 +161,7 @@ let worksList = [
     tags: ["front"], desc: "", 
     source: "https://github.com/princecodes247/CryptoVest--Client"
     
-},
+}
 ]
 let worksTags = worksList.map(worksList => worksList.tags)
 worksTags = worksTags.reduce((previousItem, item) => {
@@ -351,7 +352,8 @@ function addWorkToGrid(item, target) {
     target.appendChild(container)
 }
 
- worksList.forEach(work => {
+if(worksGrid != null){
+     worksList.forEach(work => {
 // ADD CONDITION
 if (true){
 
@@ -360,12 +362,27 @@ if (true){
     scroll.update()
 }
 })
+}
+
+if(skillsGrid != null){
+     skillsList.forEach(skill => {
+// ADD CONDITION
+if (true){
+
+
+    addToGrid(skill, skillsGrid)
+    scroll.update()
+}
+})
+}
+
 
 // For the titles
 
 // For the contact form
 
-contactForm.addEventListener('submit', () => {
+if(contactForm != null){
+    contactForm.addEventListener('submit', () => {
     event.preventDefault()
     let contactName = contactForm.querySelector('#name').value
     let contactEmail = contactForm.querySelector('#email').value
@@ -383,3 +400,4 @@ contactForm.addEventListener('submit', () => {
     })
 
 })
+}
