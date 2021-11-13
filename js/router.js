@@ -27,20 +27,37 @@ function init() {
 }
 
 
-swup.on("clickLink", function() {
-    scroll.destroy()
-    console.log("Doneit")
-})
 
 init();
 
 // this event runs for every page view after initial load
 swup.on('contentReplaced', init);
-swup.on('contentReplaced', ()=>{
-    console.log("dds")
 
-    setTimeout(function () {
-    scroll.init()
-    scroll.update()
-}, 5000)
+swup.on("animateOutStart", function() {
+    scroll.destroy()
+    console.log("Doneit")
+})
+swup.on('pageView', ()=>{
+ let formerScrollbar = document.querySelector(".c-scrollbar")
+ formerScrollbar.parentNode.removeChild(formerScrollbar)
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    elMobile: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    lerp: 0.05,
+    smoothMobile: true,
+    touchMultiplier: 3,
+    repeat: false,
+  });
+  scroll.on("scroll", (a) => {
+
+    if (a.scroll.y > window.innerHeight - (window.innerHeight / 5)) {
+      header.classList.remove('trans')
+    } else {
+      header.classList.add('trans')
+    }
+  });
+
+
+
 });

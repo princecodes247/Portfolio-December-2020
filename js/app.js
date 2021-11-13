@@ -357,6 +357,7 @@ if (true){
 
 
     addWorkToGrid(work, worksGrid)
+    scroll.update()
 }
 })
 

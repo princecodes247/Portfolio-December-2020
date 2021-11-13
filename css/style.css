@@ -69,6 +69,7 @@ body {
   background: var(--bg); /*rgba(5, 5, 5, 0.1)*/
   color: var(--color);
   transition: all 1s;
+  /*padding-bottom: 10vh;*/
 }
 
 .circle {
@@ -367,6 +368,14 @@ html.is-animating .transition-fade {
   /* scroll-snap-stop: always; */
 }
 
+.sect {
+  min-height: 10vh;
+  width: 100%;
+  /*padding: 10px 10%;*/
+
+  /* scroll-snap-stop: always; */
+}
+
 .sect-title {
   display: flex;
   margin-bottom: 10px;
@@ -400,6 +409,18 @@ html.is-animating .transition-fade {
   width: 100%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+#about .sect-body .avatar.small {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+#about .sect-body .avatar.small img {
+  width: 70%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 .perspective-text {
   color: var(--color);
@@ -624,6 +645,7 @@ html.is-animating .transition-fade {
   justify-content: space-between;
   height: 60vh;
   margin: 40px auto;
+  margin-bottom: 100px;
   position: relative;
 }
 
@@ -654,6 +676,7 @@ html.is-animating .transition-fade {
 
 #contact .social-links {
   margin: 70px 0;
+  margin-top: 150px;
   display: flex;
   justify-content: space-around;
   align-items: center;
