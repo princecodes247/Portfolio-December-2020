@@ -332,7 +332,10 @@ function addWorkToGrid(item, target) {
             </svg>`
         }
         if (panelLink.name === 'Details') {
-            linkBtn.href = item.desc;
+            linkBtn.href = "/work.html";
+            console.log(item)
+            console.log(worksList.indexOf(item))
+            linkBtn.setAttribute("data-index", worksList.indexOf(item))
             linkBtn.style.display = item.desc.trim() !== "" ? "block" : "none"
             linkBtn.innerHTML = `
             <svg fill="currentColor" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet" x="130">
@@ -380,7 +383,19 @@ if (true){
 // For the titles
 
 // For the contact form
-
+async function postData( url = "", data = {}) {
+    console.log(data)
+    const response = await fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/html"
+        },
+        body: JSON.stringify(data)
+    })
+    // return response.json()
+    return response.json()
+}
 if(contactForm != null){
     contactForm.addEventListener('submit', () => {
     event.preventDefault()
@@ -390,6 +405,9 @@ if(contactForm != null){
     contactForm.querySelector('#name').value = ''
     contactForm.querySelector('#email').value = ''
     contactForm.querySelector('#message').value = ''
+    postData("https://veldora.herokuapp.com/collections/send/vel998642Ptt",{
+        name: "ji"
+    }).then(res => {
 
     let errorBubble = document.createElement('div')
     errorBubble.innerText = 'Message Sent! ✌🏾✌🏾✌🏾'
@@ -397,6 +415,8 @@ if(contactForm != null){
     contactForm.appendChild(errorBubble)
     errorBubble.addEventListener('animationend', () => {
         contactForm.removeChild(errorBubble)
+    })
+    .catch(err => console.log(err))
     })
 
 })

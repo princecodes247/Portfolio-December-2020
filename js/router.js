@@ -33,6 +33,46 @@ init();
 // this event runs for every page view after initial load
 swup.on('contentReplaced', init);
 
+swup.on('clickLink', (e) => {
+    let index = 0
+    console.log(e.target)
+        index = e.target.getAttribute("data-index") || e.target.parentNode.getAttribute("data-index") || e.target.parentNode.parentNode.getAttribute("data-index") 
+        console.log(index)
+    let work = worksList[index]
+    swup.on('contentReplaced', ()=>{
+    console.log()
+     if (document.querySelector('.sect-title')) {
+            document.querySelector('.sect-title').innerHTML = work.name
+        }
+         if (document.querySelector('.work-img')) {
+            document.querySelector('.work-img').src =`./img/${work.img}`
+        }
+
+        if (document.querySelector('.work-desc')) {
+            document.querySelector('.work-desc').innerText = work.desc
+        }
+
+        if (document.querySelector('.work-stack')) {
+            let stack = document.querySelector('.work-stack')
+            for (let i = 0; i < 3; i++) {
+                let stackItem = document.createElement("div")
+                stackItem.innerHTML = "HTML"
+                stack.appendChild(stackItem)
+            }
+        }
+
+        if (document.querySelector('.work-tags')) {
+            let tags = document.querySelector('.work-tags')
+            work.tags.forEach(tag => {
+            console.log(tag)
+                let tagElem = document.createElement("div")
+                tagElem.innerHTML = tag
+                tags.appendChild(tagElem)
+            })
+        }
+    })
+});
+
 swup.on("animateOutStart", function() {
     scroll.destroy()
     console.log("Doneit")
