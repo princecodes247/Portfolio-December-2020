@@ -396,28 +396,28 @@ async function postData( url = "", data = {}) {
     // return response.json()
     return response.json()
 }
-if(contactForm != null){
-    contactForm.addEventListener('submit', () => {
-    event.preventDefault()
-    let contactName = contactForm.querySelector('#name').value
-    let contactEmail = contactForm.querySelector('#email').value
-    let contactMessage = contactForm.querySelector('#message').value
-    contactForm.querySelector('#name').value = ''
-    contactForm.querySelector('#email').value = ''
-    contactForm.querySelector('#message').value = ''
-    postData("https://veldora.herokuapp.com/collections/send/vel998642Ptt",{
-        name: "ji"
-    }).then(res => {
+// if(contactForm != null){
+//     contactForm.addEventListener('submit', () => {
+//     event.preventDefault()
+//     let contactName = contactForm.querySelector('#name').value
+//     let contactEmail = contactForm.querySelector('#email').value
+//     let contactMessage = contactForm.querySelector('#message').value
+//     contactForm.querySelector('#name').value = ''
+//     contactForm.querySelector('#email').value = ''
+//     contactForm.querySelector('#message').value = ''
+//     postData("https://veldora.herokuapp.com/collections/send/vel998642Ptt",{
+//         name: "ji"
+//     }).then(res => {
 
-    let errorBubble = document.createElement('div')
-    errorBubble.innerText = 'Message Sent! ✌🏾✌🏾✌🏾'
-    errorBubble.classList.add('error-bubble')
-    contactForm.appendChild(errorBubble)
-    errorBubble.addEventListener('animationend', () => {
-        contactForm.removeChild(errorBubble)
-    })
-    .catch(err => console.log(err))
-    })
+//     let errorBubble = document.createElement('div')
+//     errorBubble.innerText = 'Message Sent! ✌🏾✌🏾✌🏾'
+//     errorBubble.classList.add('error-bubble')
+//     contactForm.appendChild(errorBubble)
+//     errorBubble.addEventListener('animationend', () => {
+//         contactForm.removeChild(errorBubble)
+//     })
+//     .catch(err => console.log(err))
+//     })
 
-})
-}
+// })
+// }
