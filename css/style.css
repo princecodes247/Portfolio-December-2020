@@ -681,20 +681,24 @@ html.is-animating .transition-fade {
   /*LEFT TO RIGHT*/
   /*transition: clip-path 2s, outline 2s 1.3s;*/
   /*clip-path: polygon(-10% -10%, -10% 110%, 110% 110%, 110% 90%, 0% 90%, 0% -10%);*/
-  transition: clip-path 1s, outline 2s 0.6s;
+  transition: outline700ms;
 
-clip-path: polygon( -10% 90%, 110% 90%, 110% 110%, -10% 110%);
-
+/*clip-path: polygon( -10% 90%, 110% 90%, 110% 110%, -10% 110%);
+*/
   outline: 2px solid transparent;
 }
 
-#contact form input:focus, #contact form textarea:focus, #contact form input:ssd {
+#contact form input:focus, #contact form textarea:focus {
   /*LEFT TO RIGHT*/
   /*clip-path: polygon(-10% -10%, -10% 110%, 110% 110%, 110% 90%, 110% 90%, 110% -10%);
 
 */
-  clip-path: polygon( -10% -10%, 110% -10%, 110% 110%, -10% 110%); 
+  /*clip-path: polygon( -10% -10%, 110% -10%, 110% 110%, -10% 110%); */
    outline: 2px solid var(--s-color);
+}
+#contact form input:user-invalid, #contact form textarea:user-invalid {
+ 
+   outline: 2px solid rgba(220, 0, 0, 1);
 }
 
 #contact form textarea {
