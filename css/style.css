@@ -110,7 +110,6 @@ body {
   transform: translate(-50%, -50%);
   width: 70%;
   height: 90%;
-  background-color: turquoise;
   background: url("./bg-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -601,7 +600,6 @@ html.is-animating .transition-fade {
   color: white;
   width: 30px;
   height: 30px;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,7 +612,6 @@ html.is-animating .transition-fade {
   align-items: center;
   padding: 0;
   text-align: center;
-  display: flex;
   justify-content: center;
 }
 #services .grid div {
@@ -655,12 +652,12 @@ html.is-animating .transition-fade {
 
 #contact form {
   width: 50%;
+  margin: 40px auto;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 60vh;
-  margin: 40px auto;
   margin-bottom: 100px;
   position: relative;
 }
@@ -1117,7 +1114,7 @@ html.is-animating .transition-fade {
 }
   .perspective-text {
     color: var(--color);
-    font-family: Arial;
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -1128,12 +1125,12 @@ html.is-animating .transition-fade {
   }
   #contact form {
     width: 100%;
+    margin: 40px auto;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    margin: 40px auto;
   }
 
   #contact form label {
